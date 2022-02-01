@@ -32,11 +32,11 @@
           </div>
           <nav>
             <ul>
-              <li><a href="#aboutme" class="active">Sobre mi</a></li>
-              <li><a href="#portfolio">Portafolio</a></li>
-              <li><a href="#services">Servicios</a></li>
-              <li><a href="#blog">Blog</a></li>
-              <li><a href="#contact">Contacto</a></li>
+              <li><a href="./sobre-mi.html" class="active">Sobre mi</a></li>
+              <li><a href="./portafolio.html">Portafolio</a></li>
+              <li><a href="./servicios.html">Servicios</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./contacto.html">Contacto</a></li>
             </ul>
           </nav>
         </div>
@@ -287,61 +287,73 @@
           </section>
           <section class="blog" id="blog">
             <h2>BLOG</h2>
-            <div class="blog-container">
+            <div class="blog-container blog-index">
               <div class="blog-column">
                 <article class="article-b">
-                  <figure>
-                    <img src="./src/Rectangle 18.png" alt="" />
-                  </figure>
-                  <h3>JS El nuevo rey</h3>
+                  <a href="./post_1.html">
+                    <figure>
+                      <img src="./src/Rectangle 18.png" alt="" />
+                    </figure>
+                    <h3>JS El nuevo rey</h3>
+                  </a>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit
                     Lorem ipsum dolor sit amet, consectetur adipisc,...
-                    <a href="#">Leer mas</a>
+                    <a class="read-more" href="./post_1.html">Leer mas</a>
                   </p>
                 </article>
               </div>
               <div class="blog-column">
                 <article class="article-2col">
                   <div class="article-text">
-                    <h3>CSS3 ANIMATIONS</h3>
+                    <a href="./post_3.html" class="title-h3">
+                      <h3>CSS3 ANIMATIONS</h3>
+                    </a>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing ,
-                      consectetur adipisc,.. <a href="#">Leer mas</a>
+                      consectetur adipisc,.. <a href="./post_3.html" class="read-more">Leer mas</a>
                     </p>
                   </div>
                   <div>
-                    <figure><img src="./src/Rectangle 19.png" alt="" /></figure>
+                    <a href="./post_3.html"><figure><img src="./src/Rectangle 19.png" alt="" /></figure></a>
                   </div>
                 </article>
                 <article class="article-2col">
                   <div>
-                    <figure><img src="./src/Rectangle 21.png" alt="" /></figure>
+                    <a href="./post_4.html">
+                      <figure><img src="./src/Rectangle 21.png" alt="" /></figure>
+                    </a>
                   </div>
                   <div class="article-text">
-                    <h3>JS Engine</h3>
+                    <a href="./post_4.html class=" class="title-h3">
+                      <h3>JS Engine</h3>
+                    </a>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing ,
-                      consectetur adipisc,.. <a href="#">Leer mas</a>
+                      consectetur adipisc,.. <a href="./post_4.html" class="read-more">Leer mas</a>
                     </p>
                   </div>
                 </article>
               </div>
               <div class="blog-column">
                 <article>
-                  <h3>Javascript animation</h3>
+                  <a href="./post_2.html" class="title-h3">
+                    <h3>Javascript animation</h3>
+                  </a>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Lorem ipsum dolor sit amet, consectetur adipiscing ,
-                    consectetur adipisc,... <a href="#">Leer mas</a>
+                    consectetur adipisc,... <a href="./post_2.html" class="read-more">Leer mas</a>
                   </p>
-                  <figure>
-                    <img src="./src/Rectangle 20.png" alt="" />
-                  </figure>
+                  <a href="./post_2.html">
+                    <figure>
+                      <img src="./src/Rectangle 20.png" alt="" />
+                    </figure>
+                  </a>
                 </article>
                 <div class="blog-subscribe">
                   <p>
@@ -362,7 +374,7 @@
             <form action="">
               <div class="form-row">
                 <input type="text" placeholder="Nombre" />
-                <input type="number" name="" id="" placeholder="Teléfono" />
+                <input type="phone" name="" id="" placeholder="Teléfono" />
               </div>
               <div class="form-row">
                 <select name="" id="">

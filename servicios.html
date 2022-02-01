@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi pagina web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="container header__container">
+          <a href="./index.html" class="logo"><img src="./src/logo.PNG" alt="" /> </a>
+          <div class="button-menu">
+            <div class="menu-hamburger">
+              <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <div class="menu-close">
+              <ion-icon name="close-outline"></ion-icon>
+            </div>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="./sobre-mi.html">Sobre mi</a></li>
+              <li><a href="./portafolio.html" >Portafolio</a></li>
+              <li><a href="./servicios.html" class="active">Servicios</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <h1>Servicios</h1>
+          <div class="services-list">
+            <div class="services-row">
+              <div class="service">
+                <div class="service-icon">
+                  <ion-icon name="book-outline"></ion-icon>
+                </div>
+                <div class="service-title"><h3>UX/UI</h3></div>
+              </div>
+              <div class="service">
+                <div class="service-icon">
+                  <ion-icon name="laptop-outline"></ion-icon>
+                </div>
+                <div class="service-title">FRONT END</div>
+              </div>
+            </div>
+            <div class="services-row">
+              <div class="service">
+                <div class="service-icon">
+                  <ion-icon name="server-outline"></ion-icon>
+                </div>
+                <div class="service-title">BACK END</div>
+              </div>
+              <div class="service">
+                <div class="service-icon">
+                  <ion-icon name="phone-portrait-outline"></ion-icon>
+                </div>
+                <div class="service-title">APPS</div>
+              </div>
+            </div>
+            <div class="services-row">
+              <div class="service">
+                <div class="service-icon">
+                  <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <div class="service-title">CONSULTING</div>
+              </div>
+              <div class="service">
+                <div class="service-icon">
+                  <ion-icon name="cloud-outline"></ion-icon>
+                </div>
+                <div class="service-title">CLOUD</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer id="footer">
+        <div class="container">
+          <div class="footer1">
+            <a href="" class="logo"><img src="./src/logo.PNG" alt="" /> </a>
+            <span>GRACIAS<br />POR VISITARNOS</span>
+            <div class="social-media">
+              <a href="" class="linkedin"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+              <a href=""><ion-icon name="logo-github"></ion-icon></a>
+              <a href=""><ion-icon name="logo-codepen"></ion-icon></a>
+              <a href=""><ion-icon name="mail-outline"></ion-icon></a>
+              <a href="" class="whatsapp"
+                ><ion-icon name="logo-whatsapp"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <div class="footer2">
+            <nav>
+              <ul>
+                <li><a href="#aboutme">Sobre mi</a></li>
+                <li><a href="#portfolio">Portafolio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contacto</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer3">
+            <p>
+              Con <ion-icon name="heart-outline"></ion-icon> desde Tacna - Perú
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>
