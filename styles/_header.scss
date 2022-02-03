@@ -1,47 +1,93 @@
 header {
-    margin-bottom: 50px;
-    font-family: "Raleway", sans-serif;
-    padding: 18px;
-    height: 92px;
-    border-bottom: 2px solid #6d0ad3;
-    .header__container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      .logo{
-        img{
-          width: 60px; 
+  margin-bottom: 50px;
+  font-family: "Raleway", sans-serif;
+  padding: 18px;
+  height: 92px;
+  box-shadow: #dcdcdc 0px 2px 10px;
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .logo {
+      width: 75px;
+      height: 61.11px;
+      figure{
+        width: 75px;
+        height: 61.11px;
+        overflow: hidden;
+        position: absolute;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100px;
+          width: 70px;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.3);
+          transform: skewX(-30deg);
+          animation-name: slide;
+          animation-duration: 4s;
+          animation-timing-function: ease-in-out;
+          animation-delay: 0.3s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.13) 0%,
+            rgba(255, 255, 255, 0.13) 77%,
+            rgba(255, 255, 255, 0.5) 92%,
+            rgba(255, 255, 255, 0) 100%
+          );
         }
       }
-      nav{
-        ul{
-          display: flex;
-          list-style-type: none;
-          li{
-            margin-right: 15px;
-            a {
-              color: black;
-              font-weight: 500;
-              &:hover {
-                color: #00cf95;
-              }
+      img {
+        width: 100%;
+      }
+    }
+    nav {
+      ul {
+        display: flex;
+        list-style-type: none;
+        li {
+          margin-right: 15px;
+          a {
+            color: black;
+            font-weight: 500;
+            &:hover {
+              color: #00cf95;
             }
-            .active {
-              color: #6d0ad3;
-              border-bottom: 3px solid #6d0ad3;
-            }
-            &:last-child{
-              margin-right: 0;
-            }
+          }
+          .active {
+            color: #6d0ad3;
+            border-bottom: 3px solid #6d0ad3;
+          }
+          &:last-child {
+            margin-right: 0;
           }
         }
       }
-      .button-menu{
-        font-size: 35px;
-        color: #6d0ad3;
-        display: none;
-        cursor: pointer;
-      }
+    }
+    .button-menu {
+      font-size: 35px;
+      color: #6d0ad3;
+      display: none;
+      cursor: pointer;
     }
   }
+}
+
+@keyframes slide {
+  0% {
+    left: -100;
+    top: 0;
+  }
+  50% {
+    left: 20px;
+    top: 0px;
+  }
+  100% {
+    left: 50px;
+    top: 0;
+  }
+}

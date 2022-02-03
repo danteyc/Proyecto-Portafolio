@@ -21,7 +21,11 @@
     <div class="wrap">
       <header>
         <div class="container header__container">
-          <a href="" class="logo"><img src="./src/logo.PNG" alt="" /> </a>
+          <a href="" class="logo">
+            <figure>
+              <img src="./src/logo.PNG" alt="" />
+            </figure>
+          </a>
           <div class="button-menu">
             <div class="menu-hamburger">
               <ion-icon name="menu-outline"></ion-icon>
@@ -46,8 +50,8 @@
           <section class="about-me" id="aboutme">
             <div class="about-me-info">
               <p class="hello">Hola, hello</p>
-              <p class="name">Soy Dante Yucra</p>
-              <p class="frontend">Frontend Developer</p>
+              <p class="name">Soy <span class="name-writing">Dante Yucra .</span> </p>
+              <p class="frontend">Front end Developer</p>
               <figure class="about-me-left-img">
                 <img src="./src/Ellipse-1.png" alt="">
               </figure>
@@ -58,7 +62,7 @@
                 contarme sobre ti.
               </p>
               <div class="am-buttons">
-                <button>Descargar CV</button>
+                <a class="button-download" href="#">Descargar CV</a>
                 <div class="social-media">
                   <a href="https://www.linkedin.com/in/dante-yucra-choqque/" class="linkedin"
                     ><ion-icon name="logo-linkedin"></ion-icon
@@ -85,8 +89,8 @@
           </section>
           <div class="but-down">
             <a href="#footer">
-              <ion-icon name="chevron-down-outline"></ion-icon>
-              <span>Down</span>
+              <ion-icon class="bounce-1" name="chevron-down-outline"></ion-icon>
+              <span>Abajo</span>
             </a>
           </div>
           <section class="portfolio" id="portfolio">

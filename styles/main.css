@@ -22,7 +22,8 @@ header {
   font-family: "Raleway", sans-serif;
   padding: 18px;
   height: 92px;
-  border-bottom: 2px solid #6d0ad3;
+  -webkit-box-shadow: #dcdcdc 0px 2px 10px;
+          box-shadow: #dcdcdc 0px 2px 10px;
 }
 
 header .header__container {
@@ -39,8 +40,46 @@ header .header__container {
       flex-wrap: wrap;
 }
 
+header .header__container .logo {
+  width: 75px;
+  height: 61.11px;
+}
+
+header .header__container .logo figure {
+  width: 75px;
+  height: 61.11px;
+  overflow: hidden;
+  position: absolute;
+}
+
+header .header__container .logo figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 70px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-transform: skewX(-30deg);
+          transform: skewX(-30deg);
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.13)), color-stop(77%, rgba(255, 255, 255, 0.13)), color-stop(92%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0) 100%);
+}
+
 header .header__container .logo img {
-  width: 60px;
+  width: 100%;
 }
 
 header .header__container nav ul {
@@ -77,6 +116,36 @@ header .header__container .button-menu {
   color: #6d0ad3;
   display: none;
   cursor: pointer;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    left: -100;
+    top: 0;
+  }
+  50% {
+    left: 20px;
+    top: 0px;
+  }
+  100% {
+    left: 50px;
+    top: 0;
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: -100;
+    top: 0;
+  }
+  50% {
+    left: 20px;
+    top: 0px;
+  }
+  100% {
+    left: 50px;
+    top: 0;
+  }
 }
 
 /* GLOBAL MAIN*/
@@ -122,6 +191,23 @@ main section h2 {
   font-size: 40px;
 }
 
+.about-me .about-me-info .name-writing {
+  position: relative;
+}
+
+.about-me .about-me-info .name-writing::after {
+  content: "";
+  background-color: white;
+  border-left: 3px solid black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-animation: maquinaescribir 2s infinite alternate steps(18);
+          animation: maquinaescribir 2s infinite alternate steps(18);
+}
+
 .about-me .about-me-info .frontend {
   color: #00cf95;
 }
@@ -150,16 +236,50 @@ main section h2 {
       flex-wrap: wrap;
 }
 
-.about-me .about-me-info .am-buttons button {
+.about-me .about-me-info .am-buttons .button-download {
   background-color: #6d0ad3;
   color: white;
   font-family: "Raleway", sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
-  border: none;
   padding: 15px 40px;
+  z-index: 1;
+  border: 0.25rem solid #6d0ad3;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
   cursor: pointer;
   margin-right: 35px;
+  display: block;
+  width: 178px;
+}
+
+.about-me .about-me-info .am-buttons .button-download:hover {
+  color: #6d0ad3;
+}
+
+.about-me .about-me-info .am-buttons .button-download:hover::after {
+  -webkit-transform: skewX(-45deg) scale(1, 1);
+          transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.about-me .about-me-info .am-buttons .button-download::after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  padding: 0.85em 0.75em;
+  display: block;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: skewX(-45deg) scale(0, 1);
+          transform: skewX(-45deg) scale(0, 1);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .about-me .about-me-info .am-buttons .social-media {
@@ -204,6 +324,24 @@ main section h2 {
   margin-bottom: 5px;
 }
 
+/* ANIMATION MAQUINAESCRIBIR */
+@-webkit-keyframes maquinaescribir {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+@keyframes maquinaescribir {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
 /*BUTTON DOWN*/
 .but-down {
   width: 120px;
@@ -230,6 +368,49 @@ main section h2 {
   display: block;
   margin: 0 auto;
   font-size: 80px;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.but-down a .bounce-1 {
+  -webkit-animation-name: bounce-1;
+          animation-name: bounce-1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes bounce-1 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce-1 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 /*PORTFOLIO*/
@@ -926,10 +1107,13 @@ h1 {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
+  .about-me .about-me-info .name, .about-me .about-me-info .frontend {
+    font-size: 30px;
+  }
   .about-me .about-me-info .am-buttons {
     display: block;
   }
-  .about-me .about-me-info .am-buttons button {
+  .about-me .about-me-info .am-buttons .button-download {
     display: block;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -999,6 +1183,10 @@ h1 {
   .about-me > div {
     width: 100%;
   }
+  .about-me .about-me-info .name, .about-me .about-me-info .frontend {
+    font-size: 33px;
+    text-align: center;
+  }
   .about-me .about-me-info .about-me-left-img {
     margin-bottom: 20px;
     display: block;
@@ -1030,10 +1218,6 @@ h1 {
   }
   .about-me-img {
     display: none;
-  }
-  .about-me-info .name, .about-me-info .frontend {
-    font-size: 33px;
-    text-align: center;
   }
   .about-me-info .hello {
     text-align: center;
@@ -1151,16 +1335,22 @@ h1 {
         -ms-flex-order: -1;
             order: -1;
   }
-  .portfolio-webs .web .web-info h3 {
+  .portfolio .portfolio-webs .web .web-info h3 {
     font-size: 15px;
     margin-bottom: 3px;
   }
-  .portfolio-webs .web .web-info p {
+  .portfolio .portfolio-webs .web .web-info p {
     margin-bottom: 3px;
     font-size: 11px;
   }
-  .portfolio-webs .web .web-info .web-technologies ul li {
+  .portfolio .portfolio-webs .web .web-info .web-technologies ul li {
     font-size: 11px;
+  }
+  .about-me .about-me-info .name, .about-me .about-me-info .frontend {
+    font-size: 25px;
+  }
+  .about-me .hello {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=main.css.map */
