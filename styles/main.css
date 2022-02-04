@@ -838,6 +838,12 @@ footer .footer1 .social-media a {
   color: #000000;
 }
 
+footer .footer1 .social-media ion-icon{
+  transition: transform .3s;
+}
+footer .footer1 .social-media ion-icon:hover{
+  transform: scale(1.2);
+}
 footer .footer1 .social-media .linkedin {
   color: #0176b5;
 }
