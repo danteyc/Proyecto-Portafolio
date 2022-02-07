@@ -498,7 +498,9 @@ main section h2 {
 }
 
 .skills .skills-list .skill:hover p {
-  color: black;
+  color: #242222;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .skills .skills-list .skill:hover i {

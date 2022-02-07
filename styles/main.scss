@@ -230,7 +230,8 @@ main {
       }
       &:hover{
         p{
-          color: black;
+          color: #242222;
+          transition: all 0.5s;
         }
         i{
           -webkit-transform: scale(1.2);
