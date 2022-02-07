@@ -96,15 +96,35 @@ header .header__container nav ul li {
 header .header__container nav ul li a {
   color: black;
   font-weight: 500;
+  position: relative;
 }
 
 header .header__container nav ul li a:hover {
   color: #00cf95;
 }
 
+header .header__container nav ul li a:hover::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  left: 50%;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #00cf95;
+  bottom: -10px;
+}
+
 header .header__container nav ul li .active {
   color: #6d0ad3;
   border-bottom: 3px solid #6d0ad3;
+}
+
+header .header__container nav ul li .active:hover {
+  color: #6d0ad3;
+}
+
+header .header__container nav ul li .active:hover::after {
+  display: none;
 }
 
 header .header__container nav ul li:last-child {
@@ -186,26 +206,26 @@ main section h2 {
   font-size: 16px;
 }
 
-.about-me .about-me-info .name, .about-me .about-me-info .frontend {
-  font-weight: 700;
-  font-size: 40px;
-}
-
-.about-me .about-me-info .name-writing {
+.about-me .about-me-info .hello .typing {
   position: relative;
 }
 
-.about-me .about-me-info .name-writing::after {
+.about-me .about-me-info .hello .typing::after {
   content: "";
   background-color: white;
-  border-left: 3px solid black;
+  border-left: 2px solid black;
   width: 100%;
   height: 100%;
   position: absolute;
   right: 0;
   top: 0;
-  -webkit-animation: maquinaescribir 2s infinite alternate steps(18);
-          animation: maquinaescribir 2s infinite alternate steps(18);
+  -webkit-animation: maquinaescribir 2s infinite alternate steps(15);
+          animation: maquinaescribir 2s infinite alternate steps(15);
+}
+
+.about-me .about-me-info .name, .about-me .about-me-info .frontend {
+  font-weight: 700;
+  font-size: 40px;
 }
 
 .about-me .about-me-info .frontend {
@@ -289,6 +309,18 @@ main section h2 {
 .about-me .about-me-info .am-buttons .social-media a {
   color: #000000;
   font-size: 26px;
+}
+
+.about-me .about-me-info .am-buttons .social-media ion-icon {
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.about-me .about-me-info .am-buttons .social-media ion-icon:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .about-me .about-me-info .am-buttons .social-media .linkedin {
@@ -436,7 +468,29 @@ main section h2 {
 }
 
 .portfolio .portfolio-webs .web:hover .web-info {
-  display: block;
+  opacity: 1;
+}
+
+.portfolio .portfolio-webs .web:hover .web-info h3 {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.portfolio .portfolio-webs .web:hover .web-info p {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.portfolio .portfolio-webs .web:hover .web-info .web-technologies {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 .portfolio .portfolio-webs .web figure, .portfolio .portfolio-webs .web figure img {
@@ -453,7 +507,9 @@ main section h2 {
   top: 5%;
   left: 5%;
   padding: 15px 9px;
-  display: none;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .portfolio .portfolio-webs .web .web-info h3 {
@@ -461,6 +517,11 @@ main section h2 {
   color: white;
   font-weight: 600;
   margin-bottom: 13px;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .portfolio .portfolio-webs .web .web-info p {
@@ -469,6 +530,17 @@ main section h2 {
   font-weight: 600;
   line-height: 19px;
   margin-bottom: 25px;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.portfolio .portfolio-webs .web .web-info .web-technologies {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .portfolio .portfolio-webs .web .web-info .web-technologies ul {
@@ -838,12 +910,6 @@ footer .footer1 .social-media a {
   color: #000000;
 }
 
-footer .footer1 .social-media ion-icon{
-  transition: transform .3s;
-}
-footer .footer1 .social-media ion-icon:hover{
-  transform: scale(1.2);
-}
 footer .footer1 .social-media .linkedin {
   color: #0176b5;
 }
@@ -1189,6 +1255,10 @@ h1 {
   .about-me > div {
     width: 100%;
   }
+  .about-me .about-me-info .hello {
+    margin-bottom: 10px;
+    text-align: center;
+  }
   .about-me .about-me-info .name, .about-me .about-me-info .frontend {
     font-size: 33px;
     text-align: center;
@@ -1294,6 +1364,9 @@ h1 {
     color: white;
   }
   header .header__container nav ul li .active {
+    color: #bcff9e;
+  }
+  header .header__container nav ul li .active:hover {
     color: #bcff9e;
   }
   header .header__container .menu-active {

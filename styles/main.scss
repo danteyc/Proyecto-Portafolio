@@ -33,24 +33,24 @@ main {
     .hello {
       font-weight: 700;
       font-size: 16px;
+      .typing{
+        position: relative;
+        &::after{
+          content: "";
+          background-color: white;
+          border-left: 2px solid black;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          animation: maquinaescribir 2s infinite alternate steps(15);
+        }
+      }
     }
     .name, .frontend{
       font-weight: 700;
       font-size: 40px;
-    }
-    .name-writing{
-      position: relative;
-      &::after{
-        content: "";
-        background-color: white;
-        border-left: 3px solid black;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        animation: maquinaescribir 2s infinite alternate steps(18);
-      }
     }
     .frontend {
       color: #00cf95;
@@ -113,6 +113,12 @@ main {
         a{
           color: #000000;
           font-size: 26px;
+        }
+        ion-icon{
+          transition: transform .2s;
+          &:hover{
+            transform: scale(1.2);;
+          }
         }
         .linkedin {
           color: #0176b5;
@@ -207,7 +213,21 @@ main {
         border: 4px solid #00cf95;
         border-radius: 8px;
         .web-info {
-          display: block;
+          opacity: 1;
+          h3{
+            opacity: 1;
+            transform: translateY(0px);
+          }
+          p{
+            opacity: 1;
+            transform: translateY(0px);
+            transition-delay: 0.1s;
+          }
+          .web-technologies{
+            opacity: 1;
+            transform: translateY(0px);
+            transition-delay: 0.2s;
+          }
         }
       }
       figure, figure img{
@@ -223,12 +243,16 @@ main {
         top: 5%;
         left: 5%;
         padding: 15px 9px;
-        display: none;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
         h3 {
           font-size: 18px;
           color: white;
           font-weight: 600;
           margin-bottom: 13px;
+          transform: translateY(-100px);
+          opacity: 0;
+          transition: all 0.2s ease-in-out;      
         }
         p{
           font-size: 13px;
@@ -236,8 +260,13 @@ main {
           font-weight: 600;
           line-height: 19px;
           margin-bottom: 25px;
+          transform: translateY(100px);
+          opacity: 0;
+          transition: all 0.2s linear;
         }
         .web-technologies{
+          opacity: 0;
+          transition: all 0.2s ease-in-out;
           ul {
             display: flex;
             flex-wrap: wrap;
@@ -751,6 +780,10 @@ h1{
       width: 100%;
     }
     .about-me-info{
+      .hello{
+        margin-bottom: 10px;
+        text-align: center;
+      }
       .name, .frontend{
         font-size: 33px;
         text-align: center;
@@ -851,6 +884,9 @@ h1{
             }
             .active{
               color: #bcff9e;
+              &:hover{
+                color: #bcff9e;
+              }
             }
           }
         }
