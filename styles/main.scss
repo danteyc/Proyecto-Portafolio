@@ -139,6 +139,10 @@ main {
       img{
         display: block;
         width: 100%;
+        border: 18px solid #bcff8e;
+        border-radius: 100%;
+        transition: all 0.8s;
+        box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
       }
     }
     .about-me-img-sm {
@@ -365,7 +369,6 @@ main {
       width: 308px;
       height: 218px;
       background-color: #00cf95;
-      //border: 4px solid #d1ffa2;
       margin-right: 20px;
       margin-bottom: 18px;
       position: relative;

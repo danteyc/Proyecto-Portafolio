@@ -345,6 +345,12 @@ main section h2 {
 .about-me .about-me-img figure img {
   display: block;
   width: 100%;
+  border: 18px solid #bcff8e;
+  border-radius: 100%;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
 }
 
 .about-me .about-me-img .about-me-img-sm {
