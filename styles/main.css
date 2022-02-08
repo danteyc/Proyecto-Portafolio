@@ -237,6 +237,13 @@ main section h2 {
   display: none;
 }
 
+.about-me .about-me-info .about-me-left-img img {
+  border-radius: 100%;
+  border: 18px solid #bcff8e;
+  -webkit-box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+}
+
 .about-me .about-me-info .description {
   line-height: 24px;
   border-left: 5px solid #80e7ca;
